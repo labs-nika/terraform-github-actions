@@ -64,7 +64,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = "aksdemodns"
-  private_cluster_enabled = false
+  private_cluster_enabled = true
   private_dns_zone_id     = azurerm_private_dns_zone.aks.id
   kubernetes_version = "1.27.7"
   identity {

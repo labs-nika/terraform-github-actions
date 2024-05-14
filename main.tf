@@ -1,6 +1,15 @@
 provider "azurerm" {
   features {}
 }
+terraform {
+  backend "azurerm" {
+   # resource_group_name = "esfunc_group"
+   # storage_account_name = "esfuncgroupa00b"
+   # container_name = "tfstats"
+   # key = "terraform.tfstate"
+  }
+}
+
 
 //aks-private-endpoint
 # resource "azurerm_private_endpoint" "pe-aks" {
